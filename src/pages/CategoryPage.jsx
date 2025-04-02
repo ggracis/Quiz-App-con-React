@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Question } from "../components/Question";
-import { questions, imgs } from "../data";
+import { questions, categories } from "../data";
 
 // Función para barajar las preguntas de cada categoría y también reducirla al número de 5
 const shuffleArray = (array) => {
@@ -10,15 +10,17 @@ const shuffleArray = (array) => {
 };
 
 export const CategoryPage = () => {
-  // Leer El parametro de la URL
+  // Leer el parámetro de la URL y convertirlo a minúsculas
   const { category } = useParams();
+  const normalizedCategory = category.toLowerCase();
 
-  const [imgCategory] = imgs.filter(
-    (img) => img === `/src/assets/${category.toLowerCase()}.png`
-  );
+  // Construir la ruta de la imagen desde la carpeta public
+  const imgCategory = `/juego/${normalizedCategory}.png`;
 
   const [questionsFiltered, setQuestionsFiltered] = useState(
-    questions.filter((question) => question.category === category)
+    questions.filter(
+      (question) => question.category === categories[normalizedCategory]
+    )
   );
   const [indexQuestion, setIndexQuestion] = useState(0);
   const [activeQuiz, setActiveQuiz] = useState(false);
@@ -42,7 +44,7 @@ export const CategoryPage = () => {
         <>
           <div className="flex flex-col gap-10 items-center justify-center">
             <h1 className="text-7xl text-teal-900 text-center font-bold">
-              {category}
+              {categories[normalizedCategory]}
             </h1>
 
             <div className="flex justify-center items-center">

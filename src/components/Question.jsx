@@ -27,18 +27,18 @@ export const Question = ({
 
   useEffect(() => {
     if (timeLeft > 0 && !answered) {
-      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+      const timer = setTimeout(() => setTimeLeft(timeLeft - 0.1), 100); // Disminuir de forma fluida
       return () => clearTimeout(timer);
-    } else if (timeLeft === 0 && !answered) {
+    } else if (timeLeft <= 0 && !answered) {
       setAnswered(true);
-      setSelectAnswerIndex(null); // No se selecciona ninguna respuesta
-      setTimeout(onNextQuestion, 2000); // Pasar automáticamente a la siguiente pregunta
+      setSelectAnswerIndex(null);
+      setTimeout(onNextQuestion, 250);
     }
   }, [timeLeft, answered]);
 
   useEffect(() => {
     if (answered) {
-      const timer = setTimeout(onNextQuestion, 2000); // Pasar automáticamente después de 2 segundos
+      const timer = setTimeout(onNextQuestion, 500);
       return () => clearTimeout(timer);
     }
   }, [answered]);
@@ -58,7 +58,7 @@ export const Question = ({
       setIndexQuestion(indexQuestion + 1);
       setSelectAnswerIndex(null);
       setAnswered(false);
-      setTimeLeft(15); // Reiniciar el tiempo
+      setTimeLeft(15);
     }
   };
 
@@ -130,10 +130,14 @@ export const Question = ({
           )}
 
           {/* Barra de progreso */}
-          <div className="w-full bg-gray-300 h-4 rounded-lg mt-5">
+          <div className="w-full bg-gray-300 h-8 rounded-lg mt-5">
             <div
-              className={`h-4 rounded-lg ${
-                timeLeft === 0 ? "bg-red-600" : "bg-blue-600"
+              className={`h-8 rounded-lg transition-all duration-100 ${
+                timeLeft <= 3
+                  ? "bg-red-600 animate-[bounce_0.25s_ease-in-out_infinite]"
+                  : timeLeft <= 7
+                  ? "bg-yellow-500  animate-[bounce_0.5s_ease-in-out_infinite]"
+                  : "bg-blue-600"
               }`}
               style={{ width: `${(timeLeft / 15) * 100}%` }}
             ></div>

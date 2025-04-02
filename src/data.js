@@ -1,9 +1,9 @@
-import Cultura from "./assets/cultura.png";
-import Esportes from "./assets/esportes.png";
-import Gastronomia from "./assets/gastronomia.png";
-import Geografia from "./assets/geografia.png";
-import Historia from "./assets/história.png";
-import Natureza from "./assets/natureza.png";
+import Cultura from "/cultura.png";
+import Esportes from "/esportes.png";
+import Gastronomia from "/gastronomia.png";
+import Geografia from "/geografia.png";
+import Historia from "/história.png";
+import Natureza from "/natureza.png";
 
 export const imgs = [
   Cultura,
