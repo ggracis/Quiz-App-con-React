@@ -38,9 +38,9 @@ export const CategoryList = () => {
         gradientColor="from-cyan-200 to-lime-200"
       />
       <CategoryCard
-        category={categories.historia}
+        category={categories.história}
         src={imgHistoria}
-        alt={`Categoria ${categories.historia}`}
+        alt={`Categoria ${categories.história}`}
         gradientColor="from-sky-300 to-indigo-900"
       />
       <CategoryCard

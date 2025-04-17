@@ -2,7 +2,7 @@ import Cultura from "/cultura.png";
 import Esportes from "/esportes.png";
 import Gastronomia from "/gastronomia.png";
 import Geografia from "/geografia.png";
-import Historia from "/história.png";
+import História from "/história.png";
 import Natureza from "/natureza.png";
 
 export const imgs = [
@@ -10,7 +10,7 @@ export const imgs = [
   Esportes,
   Gastronomia,
   Geografia,
-  Historia,
+  História,
   Natureza,
 ];
 
@@ -19,50 +19,25 @@ export const categories = {
   esportes: "Esportes",
   gastronomia: "Gastronomia",
   geografia: "Geografia",
-  historia: "História",
+  história: "História",
   natureza: "Natureza",
 };
 
-const { cultura, esportes, gastronomia, geografia, historia, natureza } =
+const { cultura, esportes, gastronomia, geografia, história, natureza } =
   categories;
 
 export const questions = [
-  // Cultura
+  // Cultura - Argentina
   {
-    id: 1,
-    question: "Quem é o autor de 'Cem Anos de Solidão'?",
+    id: 101,
+    question: "Que instrumento é fundamental no tango argentino?",
     category: cultura,
-    correct_answer: "Gabriel García Márquez",
-    incorrect_answers: ["Jorge Amado", "Machado de Assis", "Clarice Lispector"],
+    correct_answer: "Bandoneón",
+    incorrect_answers: ["Guitarra", "Piano", "Violino"],
   },
   {
-    id: 2,
-    question: "Qual é o estilo musical argentino conhecido mundialmente?",
-    category: cultura,
-    correct_answer: "Tango",
-    incorrect_answers: ["Samba", "Cumbia", "Milonga"],
-  },
-  {
-    id: 3,
-    question: "Qual é o nome do famoso teatro em Buenos Aires?",
-    category: cultura,
-    correct_answer: "Teatro Colón",
-    incorrect_answers: [
-      "Teatro San Martín",
-      "Teatro Cervantes",
-      "Teatro Gran Rex",
-    ],
-  },
-  {
-    id: 4,
-    question: "Qual é o prato típico argentino feito com carne?",
-    category: cultura,
-    correct_answer: "Asado",
-    incorrect_answers: ["Empanada", "Churrasco", "Feijoada"],
-  },
-  {
-    id: 5,
-    question: "Qual é o nome do famoso escritor argentino autor de 'O Aleph'?",
+    id: 102,
+    question: "Qual escritor argentino escreveu 'Ficções'?",
     category: cultura,
     correct_answer: "Jorge Luis Borges",
     incorrect_answers: [
@@ -72,365 +47,492 @@ export const questions = [
     ],
   },
   {
-    id: 6,
+    id: 103,
     question:
-      "Qual é o nome da dança típica gaúcha que virou febre no TikTok em 2023?",
+      "Como se chama o famoso teatro de Buenos Aires conhecido por sua acústica?",
     category: cultura,
-    correct_answer: "Vanerão",
-    incorrect_answers: ["Funk", "Carimbó", "Axé"],
-  },
-  {
-    id: 7,
-    question:
-      "Qual artista brasileiro tem uma música chamada 'Chega de Saudade'?",
-    category: cultura,
-    correct_answer: "Tom Jobim",
-    incorrect_answers: ["Roberto Carlos", "Caetano Veloso", "Anitta"],
-  },
-  {
-    id: 8,
-    question:
-      "Qual é o nome do bloco de carnaval que desfila com temas de videogame?",
-    category: cultura,
-    correct_answer: "Bloco do Mario",
+    correct_answer: "Teatro Colón",
     incorrect_answers: [
-      "Galo da Madrugada",
-      "Cordão da Bola Preta",
-      "Timbalada",
+      "Teatro San Martín",
+      "Teatro Cervantes",
+      "Teatro Gran Rex",
     ],
   },
   {
-    id: 9,
-    question: "Qual dessas NÃO é uma lenda urbana brasileira?",
+    id: 104,
+    question: "Qual bebida tradicional é símbolo da cultura argentina?",
     category: cultura,
-    correct_answer: "Pé Grande",
-    incorrect_answers: ["Loira do Banheiro", "Chupa-Cabra", "Mula sem Cabeça"],
+    correct_answer: "Mate",
+    incorrect_answers: ["Café", "Chá", "Suco de laranja"],
   },
   {
-    id: 10,
-    question:
-      "Qual é o nome do famoso movimento artístico brasileiro dos anos 1920?",
+    id: 105,
+    question: "Qual festividade argentina celebra as tradições gaúchas?",
     category: cultura,
-    correct_answer: "Semana de Arte Moderna",
-    incorrect_answers: ["Tropicália", "Bossa Nova", "Concretismo"],
+    correct_answer: "Día de la Tradición",
+    incorrect_answers: ["Carnaval", "Fiesta de la Vendimia", "Semana Santa"],
   },
 
-  // Esportes
+  // Cultura - Brasil
   {
-    id: 11,
-    question: "Qual é o esporte mais popular na Argentina?",
-    category: esportes,
-    correct_answer: "Futebol",
-    incorrect_answers: ["Rugby", "Hóquei", "Tênis"],
+    id: 106,
+    question:
+      "Qual ritmo musical é originário do Brasil e conhecido mundialmente?",
+    category: cultura,
+    correct_answer: "Samba",
+    incorrect_answers: ["Tango", "Cúmbia", "Reggaeton"],
   },
   {
-    id: 12,
-    question: "Qual jogador argentino é conhecido como 'El Pibe de Oro'?",
+    id: 107,
+    question: "Qual é o maior e mais famoso carnaval do Brasil?",
+    category: cultura,
+    correct_answer: "Carnaval do Rio de Janeiro",
+    incorrect_answers: [
+      "Carnaval de Salvador",
+      "Carnaval de Recife",
+      "Carnaval de São Paulo",
+    ],
+  },
+  {
+    id: 108,
+    question: "Quem é o músico brasileiro famoso por 'Garota de Ipanema'?",
+    category: cultura,
+    correct_answer: "Tom Jobim",
+    incorrect_answers: ["Caetano Veloso", "Gilberto Gil", "Roberto Carlos"],
+  },
+  {
+    id: 109,
+    question: "Qual dança brasileira se originou como uma forma de luta?",
+    category: cultura,
+    correct_answer: "Capoeira",
+    incorrect_answers: ["Samba", "Forró", "Frevo"],
+  },
+  {
+    id: 110,
+    question: "Que expressão brasileira é usada para uma festa animada?",
+    category: cultura,
+    correct_answer: "Farra",
+    incorrect_answers: ["Feijoada", "Siesta", "Churrasco"],
+  },
+
+  // Esportes - Argentina
+  {
+    id: 111,
+    question:
+      "Quantas Copas do Mundo a seleção argentina de futebol venceu até 2022?",
+    category: esportes,
+    correct_answer: "3",
+    incorrect_answers: ["2", "4", "5"],
+  },
+  {
+    id: 112,
+    question:
+      "Quem é considerado o maior jogador de futebol argentino da história junto com Messi?",
     category: esportes,
     correct_answer: "Diego Maradona",
     incorrect_answers: [
-      "Lionel Messi",
-      "Gabriel Batistuta",
       "Juan Román Riquelme",
+      "Gabriel Batistuta",
+      "Carlos Tevez",
     ],
   },
   {
-    id: 13,
-    question: "Qual é o nome do famoso estádio de futebol em Buenos Aires?",
+    id: 113,
+    question: "Qual esporte é tradicionalmente associado à elite argentina?",
     category: esportes,
-    correct_answer: "La Bombonera",
-    incorrect_answers: ["Monumental", "El Cilindro", "Nuevo Gasómetro"],
+    correct_answer: "Polo",
+    incorrect_answers: ["Hóquei", "Tênis", "Golfe"],
   },
   {
-    id: 14,
-    question: "Qual clube argentino tem o apelido de 'Los Millonarios'?",
+    id: 114,
+    question: "Qual clube argentino é conhecido como 'El Millonario'?",
     category: esportes,
     correct_answer: "River Plate",
-    incorrect_answers: ["Boca Juniors", "Racing Club", "Independiente"],
+    incorrect_answers: ["Boca Juniors", "San Lorenzo", "Independiente"],
   },
   {
-    id: 15,
+    id: 115,
     question:
-      "Qual é o nome do torneio de futebol mais importante da América do Sul?",
+      "Qual cidade argentina sediou os Jogos Olímpicos da Juventude em 2018?",
     category: esportes,
-    correct_answer: "Copa Libertadores",
-    incorrect_answers: ["Copa América", "Copa Sudamericana", "Recopa"],
-  },
-  {
-    id: 16,
-    question: "Qual esporte usa uma 'bocha'?",
-    category: esportes,
-    correct_answer: "Bocha",
-    incorrect_answers: ["Vôlei", "Tênis de Mesa", "Golfe"],
-  },
-  {
-    id: 17,
-    question: "Qual é o nome do estádio de futebol mais famoso do Brasil?",
-    category: esportes,
-    correct_answer: "Maracanã",
-    incorrect_answers: ["Morumbi", "Mineirão", "Beira-Rio"],
-  },
-  {
-    id: 18,
-    question: "Qual é o esporte nacional do Brasil?",
-    category: esportes,
-    correct_answer: "Futebol",
-    incorrect_answers: ["Vôlei", "Basquete", "Tênis"],
-  },
-  {
-    id: 19,
-    question:
-      "Qual é o nome do famoso jogador brasileiro conhecido como 'Fenômeno'?",
-    category: esportes,
-    correct_answer: "Ronaldo",
-    incorrect_answers: ["Ronaldinho", "Pelé", "Neymar"],
-  },
-  {
-    id: 20,
-    question: "Qual time de futebol tem uma 'Gaviões da Fiel' como torcida?",
-    category: esportes,
-    correct_answer: "Corinthians",
-    incorrect_answers: ["Flamengo", "Palmeiras", "São Paulo"],
+    correct_answer: "Buenos Aires",
+    incorrect_answers: ["Rosario", "Córdoba", "Mendoza"],
   },
 
-  // Gastronomia
+  // Esportes - Brasil
   {
-    id: 21,
-    question: "Qual é o doce típico argentino feito com leite condensado?",
-    category: gastronomia,
-    correct_answer: "Dulce de leche",
-    incorrect_answers: ["Brigadeiro", "Alfajor", "Churros"],
+    id: 116,
+    question:
+      "Quantas Copas do Mundo a seleção brasileira de futebol venceu até 2022?",
+    category: esportes,
+    correct_answer: "5",
+    incorrect_answers: ["4", "3", "6"],
   },
   {
-    id: 22,
+    id: 117,
+    question: "Quem é conhecido como 'O Rei do Futebol'?",
+    category: esportes,
+    correct_answer: "Pelé",
+    incorrect_answers: ["Zico", "Romário", "Neymar"],
+  },
+  {
+    id: 118,
     question:
-      "Qual é o nome da bebida tradicional argentina feita com erva-mate?",
+      "Em que cidade brasileira foram realizados os Jogos Olímpicos de 2016?",
+    category: esportes,
+    correct_answer: "Rio de Janeiro",
+    incorrect_answers: ["São Paulo", "Brasília", "Belo Horizonte"],
+  },
+  {
+    id: 119,
+    question: "Qual é o nome do estádio do Maracanã?",
+    category: esportes,
+    correct_answer: "Estádio Jornalista Mário Filho",
+    incorrect_answers: [
+      "Estádio do Pacaembu",
+      "Estádio Beira-Rio",
+      "Arena Corinthians",
+    ],
+  },
+  {
+    id: 120,
+    question:
+      "Qual jogador brasileiro ficou famoso pelo 'gol de cobertura' na final da Copa de 2002?",
+    category: esportes,
+    correct_answer: "Ronaldinho Gaúcho",
+    incorrect_answers: ["Ronaldo", "Kaká", "Roberto Carlos"],
+  },
+
+  // Gastronomia - Argentina
+  {
+    id: 121,
+    question:
+      "Qual é o nome do prato argentino feito com carne grelhada, geralmente preparado em churrasqueiras?",
+    category: gastronomia,
+    correct_answer: "Asado",
+    incorrect_answers: ["Empanada", "Milanesa", "Chimichurri"],
+  },
+  {
+    id: 122,
+    question:
+      "Qual é a bebida tradicional argentina feita com folhas de erva-mate?",
     category: gastronomia,
     correct_answer: "Mate",
-    incorrect_answers: ["Chimarrão", "Tereré", "Café"],
+    incorrect_answers: ["Chá verde", "Café", "Tereré"],
   },
   {
-    id: 23,
+    id: 123,
     question:
-      "Qual é o nome do famoso doce argentino com recheio de doce de leite?",
+      "Como se chama o doce argentino à base de leite, açúcar e baunilha, muito usado em sobremesas?",
+    category: gastronomia,
+    correct_answer: "Dulce de leche",
+    incorrect_answers: ["Doce de leite", "Leche condensada", "Alfajor"],
+  },
+  {
+    id: 124,
+    question:
+      "Qual é o nome do doce típico argentino composto por duas bolachas recheadas com doce de leite?",
     category: gastronomia,
     correct_answer: "Alfajor",
-    incorrect_answers: ["Churros", "Empanada", "Medialuna"],
+    incorrect_answers: ["Chocotorta", "Brigadeiro", "Panettone"],
   },
   {
-    id: 24,
-    question: "Qual é o prato típico argentino servido em churrascos?",
+    id: 125,
+    question:
+      "Qual é o nome da torta gelada feita com biscoitos de chocolate e doce de leite, muito popular na Argentina?",
     category: gastronomia,
-    correct_answer: "Chorizo",
-    incorrect_answers: ["Picanha", "Linguiça", "Costela"],
-  },
-  {
-    id: 25,
-    question: "Qual é o nome do famoso vinho produzido na Argentina?",
-    category: gastronomia,
-    correct_answer: "Malbec",
-    incorrect_answers: ["Cabernet Sauvignon", "Merlot", "Chardonnay"],
-  },
-  {
-    id: 26,
-    question: "Qual é o estado brasileiro famoso pelo chimarrão?",
-    category: gastronomia,
-    correct_answer: "Rio Grande do Sul",
-    incorrect_answers: ["Paraná", "Santa Catarina", "São Paulo"],
+    correct_answer: "Chocotorta",
+    incorrect_answers: ["Tiramisu", "Torta de ricota", "Torta alfajor"],
   },
 
-  // Geografia
+  // Gastronomia - Brasil
   {
-    id: 27,
+    id: 126,
+    question:
+      "Qual é o prato brasileiro feito com feijão-preto e carnes variadas?",
+    category: gastronomia,
+    correct_answer: "Feijoada",
+    incorrect_answers: ["Moqueca", "Vatapá", "Picanha"],
+  },
+  {
+    id: 127,
+    question:
+      "Qual é o doce brasileiro feito com leite condensado, chocolate e granulado?",
+    category: gastronomia,
+    correct_answer: "Brigadeiro",
+    incorrect_answers: ["Beijinho", "Cajuzinho", "Quindim"],
+  },
+  {
+    id: 128,
+    question:
+      "Qual é o prato típico da Bahia preparado com peixe, leite de coco e dendê?",
+    category: gastronomia,
+    correct_answer: "Moqueca",
+    incorrect_answers: ["Feijoada", "Pamonha", "Farofa"],
+  },
+  {
+    id: 129,
+    question: "Qual é o nome do pão de queijo típico de Minas Gerais?",
+    category: gastronomia,
+    correct_answer: "Pão de queijo",
+    incorrect_answers: ["Coxinha", "Tapioca", "Pastel de vento"],
+  },
+  {
+    id: 130,
+    question: "Qual é o nome da bebida feita com cachaça, limão e açúcar?",
+    category: gastronomia,
+    correct_answer: "Caipirinha",
+    incorrect_answers: ["Batida", "Margarita", "Piña colada"],
+  },
+
+  // Geografia - Argentina
+  {
+    id: 131,
     question: "Qual é a capital da Argentina?",
     category: geografia,
     correct_answer: "Buenos Aires",
     incorrect_answers: ["Córdoba", "Rosário", "Mendoza"],
   },
   {
-    id: 28,
-    question: "Qual é o nome da famosa geleira na Patagônia argentina?",
-    category: geografia,
-    correct_answer: "Perito Moreno",
-    incorrect_answers: ["Upsala", "Viedma", "Spegazzini"],
-  },
-  {
-    id: 29,
-    question: "Qual é o nome da montanha mais alta da Argentina?",
+    id: 132,
+    question: "Qual é o ponto mais alto da Argentina?",
     category: geografia,
     correct_answer: "Aconcágua",
-    incorrect_answers: ["Fitz Roy", "Tupungato", "Lanín"],
+    incorrect_answers: ["Fitz Roy", "Cerro Torre", "Lanín"],
   },
   {
-    id: 30,
-    question: "Qual é o nome da região famosa por seus vinhedos na Argentina?",
+    id: 133,
+    question: "Qual rio forma a fronteira natural entre Argentina e Uruguai?",
+    category: geografia,
+    correct_answer: "Rio Uruguai",
+    incorrect_answers: ["Rio Paraná", "Rio da Prata", "Rio Paraguai"],
+  },
+  {
+    id: 134,
+    question:
+      "Qual é a região da Argentina conhecida por seus vinhos e pela Cordilheira dos Andes?",
     category: geografia,
     correct_answer: "Mendoza",
-    incorrect_answers: ["Salta", "San Juan", "La Rioja"],
+    incorrect_answers: ["Salta", "Santa Fé", "La Rioja"],
   },
   {
-    id: 31,
-    question: "Qual é o nome da famosa região de lagos no sul da Argentina?",
+    id: 135,
+    question:
+      "Como se chama a região no sul da Argentina conhecida por suas paisagens frias e montanhosas?",
     category: geografia,
-    correct_answer: "Bariloche",
-    incorrect_answers: ["El Calafate", "Ushuaia", "Puerto Madryn"],
-  },
-  {
-    id: 32,
-    question: "Qual é o bioma predominante no estado do Mato Grosso?",
-    category: geografia,
-    correct_answer: "Pantanal",
-    incorrect_answers: ["Amazônia", "Cerrado", "Caatinga"],
+    correct_answer: "Patagônia",
+    incorrect_answers: ["Pampas", "Chaco", "Mesopotâmia"],
   },
 
-  // Historia
+  // Geografia - Brasil
   {
-    id: 33,
-    question: "Quem foi o líder da independência da Argentina?",
-    category: historia,
-    correct_answer: "José de San Martín",
+    id: 136,
+    question: "Qual é a capital do Brasil?",
+    category: geografia,
+    correct_answer: "Brasília",
+    incorrect_answers: ["Rio de Janeiro", "São Paulo", "Belo Horizonte"],
+  },
+  {
+    id: 137,
+    question: "Qual é o maior rio do Brasil em volume de água?",
+    category: geografia,
+    correct_answer: "Rio Amazonas",
+    incorrect_answers: ["Rio São Francisco", "Rio Tocantins", "Rio Paraná"],
+  },
+  {
+    id: 138,
+    question:
+      "Qual estado brasileiro é conhecido por suas dunas e pelo Parque Nacional dos Lençóis Maranhenses?",
+    category: geografia,
+    correct_answer: "Maranhão",
+    incorrect_answers: ["Piauí", "Ceará", "Pará"],
+  },
+  {
+    id: 139,
+    question: "Qual é o ponto mais alto do Brasil?",
+    category: geografia,
+    correct_answer: "Pico da Neblina",
     incorrect_answers: [
-      "Simón Bolívar",
-      "Manuel Belgrano",
-      "Juan Manuel de Rosas",
+      "Pico das Agulhas Negras",
+      "Pico do Itatiaia",
+      "Monte Roraima",
     ],
   },
   {
-    id: 34,
+    id: 140,
     question:
-      "Qual é o nome da famosa guerra entre Argentina e Reino Unido em 1982?",
-    category: historia,
+      "Qual bioma brasileiro cobre grande parte do centro-oeste e é conhecido por sua biodiversidade?",
+    category: geografia,
+    correct_answer: "Cerrado",
+    incorrect_answers: ["Amazônia", "Caatinga", "Pampa"],
+  },
+
+  // História - Argentina
+  {
+    id: 141,
+    question: "Em que ano a Argentina declarou sua independência?",
+    category: história,
+    correct_answer: "1816",
+    incorrect_answers: ["1810", "1820", "1806"],
+  },
+  {
+    id: 142,
+    question:
+      "Quem foi o líder da independência argentina conhecido como 'El Libertador'? ",
+    category: história,
+    correct_answer: "José de San Martín",
+    incorrect_answers: ["Simón Bolívar", "Juan Manuel de Rosas", "Dom Pedro I"],
+  },
+  {
+    id: 143,
+    question: "Qual foi o conflito entre Argentina e Reino Unido em 1982?",
+    category: história,
     correct_answer: "Guerra das Malvinas",
     incorrect_answers: [
-      "Guerra do Chaco",
       "Guerra do Pacífico",
-      "Guerra do Prata",
+      "Guerra do Chaco",
+      "Guerra da Tríplice Aliança",
     ],
   },
   {
-    id: 35,
+    id: 144,
     question:
-      "Qual é o nome do famoso movimento político liderado por Juan Perón?",
-    category: historia,
-    correct_answer: "Peronismo",
-    incorrect_answers: ["Radicalismo", "Federalismo", "Unitarismo"],
-  },
-  {
-    id: 36,
-    question:
-      "Qual é o nome da esposa de Juan Perón conhecida por seu trabalho social?",
-    category: historia,
+      "Quem foi a primeira-dama argentina famosa por seu papel social e político?",
+    category: história,
     correct_answer: "Eva Perón",
-    incorrect_answers: ["Isabel Perón", "Cristina Kirchner", "Juliana Awada"],
+    incorrect_answers: ["Cristina Kirchner", "Isabel Perón", "Juliana Awada"],
   },
   {
-    id: 37,
+    id: 145,
     question:
-      "Qual é o nome da famosa praça em Buenos Aires conhecida por protestos históricos?",
-    category: historia,
-    correct_answer: "Praça de Maio",
-    incorrect_answers: [
-      "Praça San Martín",
-      "Praça do Congresso",
-      "Praça Itália",
-    ],
-  },
-  {
-    id: 38,
-    question:
-      "Qual é o nome do famoso tratado que dividiu as terras entre Portugal e Espanha?",
-    category: historia,
-    correct_answer: "Tratado de Tordesilhas",
-    incorrect_answers: [
-      "Tratado de Madri",
-      "Tratado de Utrecht",
-      "Tratado de Lisboa",
-    ],
-  },
-  {
-    id: 39,
-    question: "Qual é o nome do famoso líder da Inconfidência Mineira?",
-    category: historia,
-    correct_answer: "Tiradentes",
-    incorrect_answers: ["Dom Pedro I", "Getúlio Vargas", "José Bonifácio"],
+      "Quem governou a Argentina por vários períodos entre 1946 e 1974?",
+    category: história,
+    correct_answer: "Juan Domingo Perón",
+    incorrect_answers: ["Raúl Alfonsín", "Leopoldo Galtieri", "Carlos Menem"],
   },
 
-  // Natureza
+  // História - Brasil
   {
-    id: 40,
+    id: 146,
+    question: "Em que ano o Brasil proclamou sua independência?",
+    category: história,
+    correct_answer: "1822",
+    incorrect_answers: ["1808", "1889", "1831"],
+  },
+  {
+    id: 147,
+    question: "Quem foi o primeiro imperador do Brasil?",
+    category: história,
+    correct_answer: "Dom Pedro I",
+    incorrect_answers: ["Dom Pedro II", "Tiradentes", "Getúlio Vargas"],
+  },
+  {
+    id: 148,
+    question: "Qual evento marcou o fim da monarquia no Brasil?",
+    category: história,
+    correct_answer: "Proclamação da República",
+    incorrect_answers: ["Independência", "Golpe Militar", "Revolução de 1930"],
+  },
+  {
+    id: 149,
     question:
-      "Qual é o nome da famosa cachoeira compartilhada entre Argentina e Brasil?",
+      "Quem foi o presidente do Brasil durante a criação da CLT e o Estado Novo?",
+    category: história,
+    correct_answer: "Getúlio Vargas",
+    incorrect_answers: [
+      "Juscelino Kubitschek",
+      "João Goulart",
+      "Tancredo Neves",
+    ],
+  },
+  {
+    id: 150,
+    question: "Qual cidade foi a capital do Brasil antes de Brasília?",
+    category: história,
+    correct_answer: "Rio de Janeiro",
+    incorrect_answers: ["São Paulo", "Salvador", "Belo Horizonte"],
+  },
+
+  // Natureza - Argentina
+  {
+    id: 171,
+    question: "Qual é a montanha mais alta da Argentina?",
+    category: natureza,
+    correct_answer: "Aconcágua",
+    incorrect_answers: ["Fitz Roy", "Lanín", "Tupungato"],
+  },
+  {
+    id: 172,
+    question: "Em que região da Argentina se encontram as Cataratas do Iguaçu?",
+    category: natureza,
+    correct_answer: "Misiones",
+    incorrect_answers: ["Salta", "Mendoza", "Tucumán"],
+  },
+  {
+    id: 173,
+    question: "Qual deserto ocupa grande parte do sul da Argentina?",
+    category: natureza,
+    correct_answer: "Patagônia",
+    incorrect_answers: ["Atacama", "Monte", "Chaco"],
+  },
+  {
+    id: 174,
+    question: "Qual é o maior lago da Argentina?",
+    category: natureza,
+    correct_answer: "Lago Argentino",
+    incorrect_answers: [
+      "Lago Nahuel Huapi",
+      "Lago Viedma",
+      "Lago Buenos Aires",
+    ],
+  },
+  {
+    id: 175,
+    question: "Qual animal é símbolo da fauna da Patagônia argentina?",
+    category: natureza,
+    correct_answer: "Guanaco",
+    incorrect_answers: ["Puma", "Lhama", "Condor"],
+  },
+
+  // Natureza - Brasil
+  {
+    id: 176,
+    question: "Qual é o maior rio do Brasil?",
+    category: natureza,
+    correct_answer: "Rio Amazonas",
+    incorrect_answers: ["Rio São Francisco", "Rio Paraná", "Rio Tocantins"],
+  },
+  {
+    id: 177,
+    question: "Qual bioma cobre a maior parte do território brasileiro?",
+    category: natureza,
+    correct_answer: "Amazônia",
+    incorrect_answers: ["Cerrado", "Mata Atlântica", "Caatinga"],
+  },
+  {
+    id: 178,
+    question: "Qual é a maior cachoeira do Brasil em volume de água?",
     category: natureza,
     correct_answer: "Cataratas do Iguaçu",
     incorrect_answers: [
-      "Cataratas Vitória",
-      "Cataratas do Niágara",
-      "Salto Ángel",
+      "Cachoeira do Caracol",
+      "Salto do Yucumã",
+      "Cachoeira da Fumaça",
     ],
   },
   {
-    id: 41,
-    question: "Qual é o nome do famoso parque nacional na Patagônia argentina?",
+    id: 179,
+    question: "Qual estado brasileiro abriga o Pantanal?",
     category: natureza,
-    correct_answer: "Parque Nacional Los Glaciares",
-    incorrect_answers: [
-      "Parque Nacional Nahuel Huapi",
-      "Parque Nacional Lanín",
-      "Parque Nacional Iguazú",
-    ],
+    correct_answer: "Mato Grosso do Sul",
+    incorrect_answers: ["Amazonas", "Bahia", "Paraná"],
   },
   {
-    id: 42,
-    question:
-      "Qual é o nome do famoso animal encontrado na Patagônia argentina?",
-    category: natureza,
-    correct_answer: "Guanaco",
-    incorrect_answers: ["Lhama", "Vicunha", "Alpaca"],
-  },
-  {
-    id: 43,
-    question: "Qual é o nome da famosa floresta subtropical na Argentina?",
-    category: natureza,
-    correct_answer: "Selva Missioneira",
-    incorrect_answers: ["Mata Atlântica", "Floresta Amazônica", "Cerrado"],
-  },
-  {
-    id: 44,
-    question: "Qual é o nome do famoso lago na região de Bariloche?",
-    category: natureza,
-    correct_answer: "Lago Nahuel Huapi",
-    incorrect_answers: ["Lago Argentino", "Lago Viedma", "Lago Fagnano"],
-  },
-  {
-    id: 45,
+    id: 180,
     question:
       "Qual é o nome do famoso arquipélago brasileiro conhecido por sua biodiversidade?",
     category: natureza,
     correct_answer: "Fernando de Noronha",
-    incorrect_answers: [
-      "Ilha Grande",
-      "Ilha do Mel",
-      "Arquipélago de Abrolhos",
-    ],
-  },
-  {
-    id: 46,
-    question:
-      "Qual é o nome do famoso naturalista que estudou a biodiversidade brasileira?",
-    category: natureza,
-    correct_answer: "Charles Darwin",
-    incorrect_answers: [
-      "Alexander von Humboldt",
-      "Fritz Müller",
-      "Carl Linnaeus",
-    ],
-  },
-  {
-    id: 47,
-    question:
-      "Qual é o nome do famoso cientista brasileiro conhecido por suas pesquisas sobre o câncer?",
-    category: natureza,
-    correct_answer: "Carlos Chagas",
-    incorrect_answers: ["Oswaldo Cruz", "Vital Brazil", "Adolfo Lutz"],
+    incorrect_answers: ["Ilhabela", "Abrolhos", "Marajó"],
   },
 ];
